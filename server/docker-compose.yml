@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+    app:
+        image: app:test
+        build:
+            context: .
+        ports:
+            - 3000:3000
+
+    mongodb_service:
+        image: mongo
+        restart: always
